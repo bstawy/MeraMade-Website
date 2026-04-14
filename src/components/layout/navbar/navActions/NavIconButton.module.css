@@ -1,0 +1,19 @@
+.icon {
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  color: var(--color-primary);
+  transition:
+    color 0.3s ease-out,
+    background-color 0.3s ease-out;
+}
+/*
+.icon svg {
+  fill: currentColor;
+}*/
+
+.icon:hover {
+  color: var(--color-bg-container);
+  background-color: var(--color-primary);
+}
