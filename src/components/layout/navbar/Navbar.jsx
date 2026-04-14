@@ -7,12 +7,14 @@ import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <div className={styles.navbar}>
-      <NavbarLogo />
-      <NavbarLinks />
-      <NavbarHamburgerMenu />
-      <NavbarIcons />
-    </div>
+    <header>
+      <div className={styles.navbar}>
+        <NavbarLogo />
+        <NavbarLinks />
+        <NavbarHamburgerMenu />
+        <NavbarIcons />
+      </div>
+    </header>
   );
 };
 
