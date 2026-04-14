@@ -6,6 +6,7 @@ const App = () => {
       <header>
         <Navbar />
       </header>
+      <main></main>
     </>
   );
 };
