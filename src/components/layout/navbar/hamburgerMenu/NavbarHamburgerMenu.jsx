@@ -1,4 +1,4 @@
-import { useToggle } from "../../../../hooks/useToggleHook";
+import { useToggle } from "../../../../hooks/UseToggleHook";
 import styles from "./NavbarHamburgerMenu.module.css";
 
 const NavbarHamburgerMenu = () => {

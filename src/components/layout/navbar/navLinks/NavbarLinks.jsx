@@ -1,25 +1,12 @@
-import styles from "../Navbar.module.css";
+import NavLinkItem from "./NavLinkItem";
 
 const NavbarLinks = () => {
   return (
     <nav>
       <ul>
-        <li>
-          <a href="#home" className={styles.navItem}>
-            Our Story
-          </a>
-        </li>
-        <li>
-          {" "}
-          <a href="#home" className={styles.navItem}>
-            The Bakery
-          </a>
-        </li>
-        <li>
-          <a href="#home" className={styles.navItem}>
-            Events
-          </a>
-        </li>
+        <NavLinkItem title="Our Story" path="/" />
+        <NavLinkItem title="The Bakery" path="/bakery" />
+        <NavLinkItem title="Events" path="/events" />
       </ul>
     </nav>
   );
