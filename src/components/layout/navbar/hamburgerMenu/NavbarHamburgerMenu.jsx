@@ -1,9 +1,6 @@
-import { useToggle } from "../../../../hooks/UseToggleHook";
 import styles from "./NavbarHamburgerMenu.module.css";
 
-const NavbarHamburgerMenu = () => {
-  const [isOpen, toggleOpen] = useToggle();
-
+const NavbarHamburgerMenu = ({ isOpen, toggleOpen }) => {
   return (
     <button
       type="button"

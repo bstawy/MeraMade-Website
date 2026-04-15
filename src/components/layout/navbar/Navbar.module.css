@@ -47,6 +47,7 @@ nav ul a:hover,
   font-weight: bold;
 }
 
+.active::after,
 nav ul a:hover::after {
   width: 100%;
 }
@@ -59,7 +60,35 @@ nav ul a:hover::after {
 
 @media (max-width: 790px) {
   nav {
-    display: none;
+    /* Remove display: none; */
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: var(--color-bg);
+    padding: 2rem;
+
+    /* Animation Setup */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease,
+      visibility 0.3s;
+    z-index: 10;
+  }
+
+  /* Slide down and fade in */
+  nav.mobileVisible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
   }
 
   .icons {
