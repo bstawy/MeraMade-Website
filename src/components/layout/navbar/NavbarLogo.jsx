@@ -1,10 +1,12 @@
+import { NavLink } from "react-router-dom";
+
 import styles from "./Navbar.module.css";
 
 const NavbarLogo = () => {
   return (
-    <a href="#home" className={styles.logo}>
+    <NavLink to="/" className={styles.logo}>
       MeraMade
-    </a>
+    </NavLink>
   );
 };
 
