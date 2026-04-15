@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
-import styles from "../Navbar.module.css";
+
+import styles from "./NavLinks.module.css";
 
 const NavLinkItem = ({ title, path, isLinkHovered, setIsHovered, onTap }) => {
   return (

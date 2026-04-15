@@ -5,13 +5,13 @@ import BakeryPage from "./pages/bakery/BakeryPage";
 import EventsPage from "./pages/events/EventsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
-import Navbar from "./components/layout/navbar/Navbar";
+import Header from "./components/layout/header/Header";
 
 const App = () => {
   return (
     <>
       <header>
-        <Navbar />
+        <Header />
       </header>
       <Routes>
         <Route path="/" element={<HomePage />} />

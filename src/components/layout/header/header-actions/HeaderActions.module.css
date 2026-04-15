@@ -1,3 +1,9 @@
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
 .icon {
   display: flex;
   justify-content: center;
@@ -8,12 +14,14 @@
     color 0.3s ease-out,
     background-color 0.3s ease-out;
 }
-/*
-.icon svg {
-  fill: currentColor;
-}*/
 
 .icon:hover {
   color: var(--color-bg-container);
   background-color: var(--color-primary);
+}
+
+@media (max-width: 790px) {
+  .icons {
+    display: none;
+  }
 }

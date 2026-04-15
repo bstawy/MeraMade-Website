@@ -1,16 +1,23 @@
-import NavbarLogo from "./NavbarLogo";
-import NavbarLinks from "./navLinks/NavbarLinks";
-import NavbarIcons from "./navActions/NavbarIcons";
+import { useState } from "react";
+import { useToggle } from "../../../hooks/UseToggleHook";
 
-import styles from "./Navbar.module.css";
+import NavbarHamburgerMenu from "./hamburger-menu/NavbarHamburgerMenu";
+import NavLinks from "./nav-links/NavLinks";
 
 const Navbar = () => {
+  const [isMenuOpen, toggleMenu] = useToggle();
+  const [isLinkHovered, setIsLinkHovered] = useState(false);
+
   return (
-    <div className={styles.navbar}>
-      <NavbarLogo />
-      <NavbarLinks />
-      <NavbarIcons />
-    </div>
+    <>
+      <NavLinks
+        isMenuOpen={isMenuOpen}
+        onTap={toggleMenu}
+        isLinkHovered={isLinkHovered}
+        setIsLinkHovered={setIsLinkHovered}
+      />
+      <NavbarHamburgerMenu isOpen={isMenuOpen} toggleOpen={toggleMenu} />
+    </>
   );
 };
 
