@@ -9,8 +9,10 @@ nav ul a {
   position: relative;
   color: var(--color-text);
   font-size: 1rem;
-  font-weight: var(--fw-medium);
-  transition: color var(--transition-base);
+  font-weight: var(--fw-regular);
+  transition:
+    color var(--transition-base),
+    font-weight var(--transition-base);
 }
 
 nav ul a::after {
@@ -19,7 +21,7 @@ nav ul a::after {
   height: 1.5px;
   position: absolute;
   left: 0;
-  bottom: -3px;
+  bottom: -5px;
   background-color: var(--color-primary);
   transition: width var(--transition-base);
 }

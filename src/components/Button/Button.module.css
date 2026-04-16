@@ -74,6 +74,4 @@
 .lg {
   padding: var(--space-20) var(--space-38);
   font-size: var(--fs-18);
-  font-weight: var(--fw-semi-bold);
-  font-family: var(--font-main);
 }
