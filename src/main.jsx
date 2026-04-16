@@ -11,7 +11,8 @@ import "./index.css";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ThemeProvider>
-      <BrowserRouter>
+      {/* basename is here for github pages */}
+      <BrowserRouter basename="/MeraMade-Website/">
         <App />
       </BrowserRouter>
     </ThemeProvider>

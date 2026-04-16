@@ -6,4 +6,5 @@ import svgr from "vite-plugin-svgr";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), svgr()],
+  base: "/MeraMade-Website/", // this is for github pages, change it to "/" for development and other hosting platforms
 });
