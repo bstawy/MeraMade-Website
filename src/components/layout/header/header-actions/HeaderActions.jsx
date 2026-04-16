@@ -8,11 +8,13 @@ import HeaderActionButton from "./HeaderActionButton";
 
 import styles from "./HeaderActions.module.css";
 
-const HeaderActions = () => {
+const HeaderActions = ({ isMenuOpen }) => {
   const { _, toggleTheme } = useTheme();
 
   return (
-    <div className={styles.icons}>
+    <div
+      className={`${styles.actions} ${isMenuOpen ? styles.mobileVisible : ""}`}
+    >
       <HeaderActionButton icon={<LangIcon />} />
       <HeaderActionButton icon={<ThemeIcon />} onTap={toggleTheme} />
       <HeaderActionButton icon={<CartIcon />} />

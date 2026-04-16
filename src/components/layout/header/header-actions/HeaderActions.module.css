@@ -1,18 +1,18 @@
-.icons {
+.actions {
   display: flex;
   flex-direction: row;
   gap: 24px;
 }
 
 .icon {
+  padding: 4px;
   display: flex;
   justify-content: center;
-  padding: 4px;
   border-radius: 4px;
   color: var(--color-primary);
   transition:
-    color 0.3s ease-out,
-    background-color 0.3s ease-out;
+    color var(--transition-slow),
+    background-color var(--transition-slow);
 }
 
 .icon:hover {
@@ -20,8 +20,29 @@
   background-color: var(--color-primary);
 }
 
-@media (max-width: 790px) {
-  .icons {
-    display: none;
+@media (max-width: 800px) {
+  .actions {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    padding: 32px;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-bg);
+    position: absolute;
+    top: 250px;
+    left: 0;
+    z-index: var(--z-navbar);
+    transform: translateY(-10px);
+    transition:
+      visibility var(--transition-base),
+      transform var(--transition-base),
+      opacity var(--transition-base);
+  }
+
+  .actions.mobileVisible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
   }
 }

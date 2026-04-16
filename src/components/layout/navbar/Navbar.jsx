@@ -1,22 +1,20 @@
 import { useState } from "react";
-import { useToggle } from "../../../hooks/UseToggleHook";
 
 import NavbarHamburgerMenu from "./hamburger-menu/NavbarHamburgerMenu";
 import NavLinks from "./nav-links/NavLinks";
 
-const Navbar = () => {
-  const [isMenuOpen, toggleMenu] = useToggle();
+const Navbar = ({ isMenuOpen, onLinkTap }) => {
   const [isLinkHovered, setIsLinkHovered] = useState(false);
 
   return (
     <>
       <NavLinks
         isMenuOpen={isMenuOpen}
-        onTap={toggleMenu}
+        onTap={onLinkTap}
         isLinkHovered={isLinkHovered}
         setIsLinkHovered={setIsLinkHovered}
       />
-      <NavbarHamburgerMenu isOpen={isMenuOpen} toggleOpen={toggleMenu} />
+      <NavbarHamburgerMenu isOpen={isMenuOpen} toggleOpen={onLinkTap} />
     </>
   );
 };

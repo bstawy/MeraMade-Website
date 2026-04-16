@@ -1,8 +1,37 @@
 .header {
+  height: 80px;
+  padding: 0 32px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 32px;
-  height: 80px;
+}
+
+.menuWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 48px;
+}
+
+@media (max-width: 800px) {
+  .menuWrapper {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: var(--color-bg);
+    display: flex;
+    flex-direction: column; /* This stacks them vertically */
+    padding: 32px;
+    transition: all var(--transition-base);
+    z-index: var(--z-navbar);
+  }
+
+  .menuWrapper.mobileVisible {
+    visibility: visible;
+    opacity: 1;
+  }
 }

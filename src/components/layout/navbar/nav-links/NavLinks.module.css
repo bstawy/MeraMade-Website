@@ -7,28 +7,27 @@ nav ul {
 
 nav ul a {
   position: relative;
-  color: var(--color-bg-surface);
+  color: var(--color-text);
   font-size: 1rem;
   font-weight: var(--fw-medium);
-  font-family: var(--font-display);
-  transition: color 0.3s ease;
+  transition: color var(--transition-base);
 }
 
 nav ul a::after {
   content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
   width: 0;
   height: 1.5px;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
   background-color: var(--color-primary);
-  transition: width 0.3s;
+  transition: width var(--transition-base);
 }
 
 nav ul a:hover,
 .active {
   color: var(--color-primary);
-  font-weight: bold;
+  font-weight: var(--fw-bold);
 }
 
 nav ul a:hover::after,
@@ -36,23 +35,22 @@ nav ul a:hover::after,
   width: 100%;
 }
 
-@media (max-width: 790px) {
+@media (max-width: 800px) {
   nav {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    padding: 32px;
+    background: var(--color-bg);
     position: absolute;
     top: 80px;
     left: 0;
-    width: 100%;
-    background: var(--color-bg);
-    padding: 2rem;
-
-    opacity: 0;
-    visibility: hidden;
+    z-index: var(--z-navbar);
     transform: translateY(-10px);
     transition:
-      transform 0.3s ease,
-      opacity 0.3s ease,
-      visibility 0.3s;
-    z-index: 10;
+      visibility var(--transition-base),
+      transform var(--transition-base),
+      opacity var(--transition-base);
   }
 
   nav ul {
@@ -61,8 +59,8 @@ nav ul a:hover::after,
   }
 
   nav.mobileVisible {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
     transform: translateY(0);
   }
 }
