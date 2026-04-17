@@ -1,4 +1,4 @@
-import ArrowIcon from "/src/assets/arrow_v2_icon.svg?react";
+import ArrowIcon from "/src/assets/arrow_v1_icon.svg?react";
 
 import Button from "../../../../components/Button/Button";
 
