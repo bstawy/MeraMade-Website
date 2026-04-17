@@ -1,0 +1,155 @@
+/* ── Field shell ─────────────────────────── */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: 100%;
+}
+
+.label {
+  font-size: var(--fs-14);
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+/* ── Wrapper (handles icon positioning) ──── */
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  color: var(--color-text-muted);
+  pointer-events: none;
+  transition: color var(--transition-base);
+}
+
+.iconLeft {
+  left: 14px;
+}
+.iconRight {
+  right: 14px;
+}
+
+/* ── Base input ───────────────────────────── */
+.input {
+  width: 100%;
+  border: 1px solid;
+  border-radius: var(--radius-6);
+  background: transparent;
+  color: var(--color-text);
+  font-family: inherit;
+  outline: none;
+  transition:
+    border-color var(--transition-base),
+    background var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* ── Sizes ────────────────────────────────── */
+.sm {
+  padding: 8px 12px;
+  font-size: var(--fs-14);
+}
+.md {
+  padding: 10px 16px;
+  font-size: var(--fs-16);
+}
+.lg {
+  padding: var(--space-20) var(--space-20);
+  font-size: var(--fs-18);
+}
+
+/* icon padding offsets */
+.hasIconLeft .sm {
+  padding-left: 32px;
+}
+.hasIconLeft .md {
+  padding-left: 40px;
+}
+.hasIconLeft .lg {
+  padding-left: 48px;
+}
+.hasIconRight .sm {
+  padding-right: 32px;
+}
+.hasIconRight .md {
+  padding-right: 40px;
+}
+.hasIconRight .lg {
+  padding-right: 48px;
+}
+
+/* ── Variants ─────────────────────────────── */
+.outlined {
+  border-color: color-mix(in srgb, var(--color-primary), transparent 75%);
+}
+
+.outlined:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--color-primary), transparent 88%);
+}
+
+.filled {
+  background: color-mix(in srgb, var(--color-primary), transparent 94%);
+  border-color: transparent;
+}
+
+.filled:focus {
+  background: color-mix(in srgb, var(--color-primary), transparent 90%);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--color-primary), transparent 88%);
+}
+
+.ghost {
+  border-color: transparent;
+  border-bottom-color: color-mix(
+    in srgb,
+    var(--color-primary),
+    transparent 75%
+  );
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ghost:focus {
+  border-bottom-color: var(--color-primary);
+  box-shadow: 0 2px 0 0
+    color-mix(in srgb, var(--color-primary), transparent 75%);
+}
+
+/* ── States ───────────────────────────────── */
+.error {
+  border-color: var(--color-error) !important;
+}
+
+.error:focus {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-error), transparent 88%) !important;
+}
+
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── Hint ─────────────────────────────────── */
+.hint {
+  font-size: var(--fs-12);
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+.hintError {
+  color: var(--color-error);
+}
