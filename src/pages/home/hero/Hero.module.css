@@ -1,5 +1,6 @@
 .hero {
   min-height: 100vh;
+  background-color: var(--color-bg);
   background-image: radial-gradient(
     ellipse 70% 60% at 65% 40%,
     var(--hero-glow) 0%,
@@ -8,16 +9,7 @@
 }
 
 .heroContent {
-  padding: var(--space-200) var(--space-96);
   position: relative;
-}
-
-.eyebrow {
-  margin-bottom: 8px;
-  color: var(--color-primary);
-  font-size: var(--fs-16);
-  font-weight: var(--fw-regular);
-  letter-spacing: 0.3rem;
 }
 
 @media (max-width: 800px) {

@@ -1,5 +1,6 @@
 .scrollIndicator {
   width: 100%;
+  margin-bottom: var(--space-32);
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -1,0 +1,48 @@
+import PasteriesIcon from "/src/assets/pasteries_icon.svg?react";
+import BreadIcon from "/src/assets/bread_icon.svg?react";
+import StarIcon from "/src/assets/star_icon.svg?react";
+
+import CollectionCard from "./CollectionCard";
+
+import styles from "../Collections.module.css";
+
+const collectionsData = [
+  {
+    id: 1,
+    name: "Pastries",
+    description:
+      "Delicate layers, golden laminations, and the scent of French butter reimagined for the modern palate.",
+    icon: <PasteriesIcon />,
+    color: "#E7E2D9",
+  },
+  {
+    id: 2,
+    name: "Breads",
+    description:
+      "From rustic country loaves to artisanal sourdoughs, each bread is a testament to the timeless craft of baking.",
+
+    icon: <BreadIcon />,
+    color: "#EDE8DF",
+  },
+  {
+    id: 3,
+    name: "Specialties",
+    description:
+      "Unique creations that blend tradition with innovation, offering a taste of the unexpected in every bite.",
+
+    icon: <StarIcon />,
+    color: "#FFDEA5",
+  },
+];
+
+const CollectionsGrid = () => {
+  return (
+    <div className={styles.collectionsGrid}>
+      {collectionsData.map((collection) => (
+        <CollectionCard key={collection.id} collection={collection} />
+      ))}
+    </div>
+  );
+};
+
+export default CollectionsGrid;

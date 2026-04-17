@@ -1,12 +1,24 @@
 .btn {
   border: 1px solid;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-6);
   transition:
     color var(--transition-base),
     background-color var(--transition-base),
     border-color var(--transition-base),
     transform var(--transition-base),
     box-shadow var(--transition-base);
+}
+
+.iconButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-8);
+  transition: gap var(--transition-base);
+}
+
+.iconButton:hover {
+  gap: var(--space-16);
 }
 
 .primary {
@@ -26,6 +38,12 @@
 .primary:active {
   transform: translateY(0px);
   box-shadow: none;
+}
+
+.text {
+  color: var(--color-primary);
+  background: transparent;
+  border-color: transparent;
 }
 
 .ghost {
@@ -62,7 +80,7 @@
 }
 
 .sm {
-  padding: 6px 14px;
+  /*padding: 6px 14px;*/
   font-size: var(--fs-14);
 }
 

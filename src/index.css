@@ -3,7 +3,7 @@
   --color-primary: #c5a059;
   --color-primary-hover: #5e4612;
   --color-bg: #fcf9f8;
-  --color-bg-surface: #ffffff;
+  --color-bg-surface: #f9f3ea;
   --color-bg-container: #f6f3f2;
   --hero-bg: #fcf9f8;
   --hero-glow: #c8a85a;
@@ -25,7 +25,7 @@
   --fs-16: clamp(0.875rem, 0.225vw + 0.82rem, 1rem);
   --fs-18: clamp(1rem, 0.225vw + 0.945rem, 1.125rem);
   --fs-24: clamp(1.25rem, 0.449vw + 1.14rem, 1.5rem);
-  --fs-32: clamp(1.75rem, 0.449vw + 1.64rem, 2rem);
+  --fs-32: clamp(1.5rem, 0.449vw + 1.64rem, 2rem);
   --fs-48: clamp(2.25rem, 1.348vw + 1.921rem, 3rem);
   --fs-64: clamp(2rem, 3.596vw + 1.124rem, 4rem);
   --fs-96: clamp(3rem, 5.393vw + 1.685rem, 6rem);
@@ -53,11 +53,12 @@
   --container-max: 1200px;
 
   /* ─── Border Radius ─── */
-  --radius-xs: 4px;
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 16px;
-  --radius-full: 9999px;
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-16: 16px;
+  --radius-24: 24px;
+  --radius-circular: 9999px;
 
   /* ─── Z-index scale ─── */
   --z-base: 0;
@@ -85,8 +86,8 @@
 [data-theme="dark"] {
   --color-primary: #e9c176;
   --color-primary-hover: #f0d08e;
-  --color-bg: #1c1b1b;
-  --color-bg-surface: #252423;
+  --color-bg: #131313;
+  --color-bg-surface: #1c1b1b;
   --color-bg-container: #261900;
   --hero-bg: #0f0f0a;
   --hero-glow: #4a3d1a;
@@ -146,6 +147,11 @@ html[lang="ar"] body {
   direction: rtl;
 }
 
+section {
+  padding: clamp(96px, calc(50.427px + 11.685vw), 200px)
+    clamp(48px, calc(26.966px + 5.393vw), 96px);
+}
+
 /* ─── Headings ─── */
 h1,
 h2,
@@ -198,7 +204,7 @@ button {
 :focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-6);
 }
 
 /* ─── Reduced motion ─── */
