@@ -37,7 +37,7 @@ const Input = ({
   return (
     <div className={styles.field}>
       {label && (
-        <label className={styles.label} htmlFor={id}>
+        <label id={id} className={styles.label} htmlFor={id}>
           {label}
         </label>
       )}
