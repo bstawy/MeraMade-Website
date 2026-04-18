@@ -1,0 +1,85 @@
+/* ============================================================
+   SPLASH SCREEN
+   Placed in /public/splash.css so it loads before React boots.
+   Linked directly in index.html <head>.
+============================================================ */
+
+#splash-screen {
+  position: fixed;
+  inset: 0;
+  height: 100dvh;
+  width: 100vw;
+  background: #0e0b07;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  pointer-events: all;
+  transition:
+    opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.8s;
+}
+
+/* Prevent scroll while splash is visible */
+body.splash-loading {
+  overflow: hidden;
+  touch-action: none;
+  height: 100dvh;
+}
+
+.loader-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader-logo {
+  width: 200px;
+  height: auto;
+  animation: logo-breathe 3s ease-in-out infinite;
+}
+
+.loader-text {
+  color: #c5a059;
+  font-family: sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-size: 12px;
+  /*margin-top: 30px;*/
+  animation: text-fade 3s ease-in-out infinite;
+}
+
+/* Gold glow matches Mera Made brand color */
+@keyframes logo-breathe {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(0.98);
+    filter: drop-shadow(0 0 0px #c5a059);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 12px rgba(197, 160, 89, 0.35));
+  }
+}
+
+@keyframes text-fade {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Added by useSplash hook to trigger the fade-out transition */
+.splash-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import PageTransition from "./components/layout/PageTransition";
+import { useSplash } from "./hooks/useSplash";
 
 import HomePage from "./pages/home/HomePage";
 import BakeryPage from "./pages/bakery/BakeryPage";
@@ -12,6 +13,8 @@ import Header from "./components/layout/header/Header";
 
 const App = () => {
   const location = useLocation();
+
+  useSplash(1500);
 
   return (
     <>

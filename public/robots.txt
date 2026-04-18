@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bstawy.github.io/MeraMade-Website//sitemap.xml
