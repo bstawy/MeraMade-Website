@@ -12,15 +12,12 @@ const Header = () => {
   const [isMenuOpen, toggleMenu] = useToggle();
   const headerRef = useRef(null);
 
-  // Use useCallback to prevent unnecessary hook re-runs.
-  // We check 'isMenuOpen' to ensure we only toggle when the menu is actually active.
   const closeMenu = useCallback(() => {
     if (isMenuOpen) {
       toggleMenu();
     }
   }, [isMenuOpen, toggleMenu]);
 
-  // Apply the hook to the header container
   useClickOutside(headerRef, closeMenu);
 
   return (

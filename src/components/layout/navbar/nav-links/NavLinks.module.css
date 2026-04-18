@@ -2,13 +2,13 @@ nav ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 48px;
+  gap: var(--space-48);
 }
 
 nav ul a {
   position: relative;
-  color: var(--color-text);
-  font-size: 1rem;
+  color: var(--color-text-primary);
+  font-size: var(--fs-16);
   font-weight: var(--fw-regular);
   transition:
     color var(--transition-base),
@@ -43,7 +43,7 @@ nav ul a:hover::after,
     opacity: 0;
     width: 100%;
     padding: 32px;
-    background: var(--color-bg);
+    background: var(--color-bg-page);
     position: absolute;
     top: 80px;
     left: 0;

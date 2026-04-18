@@ -24,13 +24,17 @@ const Manifesto = () => {
           the world slows down. We don't chase efficiency; we chase the perfect
           crust, the most aerated crumb, and the soul of the grain.
         </p>
-        <div className={styles.journeyTitle}>
-          <Eyebrow text="THE NOCTURNAL JOURNEY" />
+        <div className={styles.journey}>
+          <div className={styles.journeyTitle}>
+            <Eyebrow text="THE NOCTURNAL JOURNEY" />
+          </div>
+          <div className={styles.journeyDescription}>
+            <i>
+              "While the city sleeps, the ovens breathe. We are the keepers of
+              the sourdough ritual."
+            </i>
+          </div>
         </div>
-        <i className={styles.journeyDescription}>
-          "While the city sleeps, the ovens breathe. We are the keepers of the
-          sourdough ritual."
-        </i>
       </div>
     </section>
   );

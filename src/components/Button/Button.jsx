@@ -1,14 +1,24 @@
 import styles from "./Button.module.css";
 
+const iconColorDefaults = {
+  primary: "var(--color-text-on-primary)",
+  ghost: "var(--color-primary)",
+  text: "var(--color-primary)",
+};
+
 const Button = ({
   label,
   icon = null,
+  iconPosition = "right",
   variant = "primary",
   size = "lg",
   disabled = false,
-  iconColor = icon && "var(--color-primary)",
+  iconColor,
   onClick,
 }) => {
+  const resolvedIconColor =
+    iconColor ?? iconColorDefaults[variant] ?? "currentColor";
+
   const cls = [
     styles.btn,
     icon && styles.iconButton,
@@ -19,13 +29,23 @@ const Button = ({
     .filter(Boolean)
     .join(" ");
 
-  const iconStyle = {
-    color: iconColor,
-  };
+  const iconNode = icon && (
+    <span
+      style={{
+        color: resolvedIconColor,
+        display: "inline-flex",
+        alignItems: "center",
+      }}
+    >
+      {icon}
+    </span>
+  );
 
   return (
     <button type="button" className={cls} disabled={disabled} onClick={onClick}>
-      {label} {icon && <span style={iconStyle}>{icon}</span>}
+      {iconPosition === "left" && iconNode}
+      {label}
+      {iconPosition === "right" && iconNode}
     </button>
   );
 };

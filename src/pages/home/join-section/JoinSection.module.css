@@ -15,7 +15,7 @@
 
 .description {
   width: 60%;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   font-size: var(--fs-18);
   font-weight: var(--fw-light);
 }
@@ -28,9 +28,9 @@
 }
 
 .terms {
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   font-size: var(--fs-14);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-regular);
 }
 
 .snackbar {
@@ -106,7 +106,7 @@
 }
 
 .snackbarText span {
-  font-size: var(--fs-12);
+  font-size: var(--fs-14);
   opacity: 0.75;
 }
 

@@ -4,10 +4,10 @@ const Eyebrow = ({
   letterSpacing = "0.3rem",
 }) => {
   const styles = {
-    marginBottom: "8px",
-    color: "var(--color-primary)",
+    marginBottom: "var(--space-8)",
+    color: "var(--color-accent)",
     fontSize: fontSize,
-    fontWeight: "var(--fw-regular)",
+    fontWeight: "var(--fw-medium)",
     letterSpacing: letterSpacing,
   };
 

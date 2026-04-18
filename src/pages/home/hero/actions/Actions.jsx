@@ -7,11 +7,7 @@ import styles from "./Actions.module.css";
 const Actions = () => {
   return (
     <div className={styles.actions}>
-      <Button
-        label="View Menu"
-        icon={<ArrowIcon />}
-        iconColor="var(--color-bg-container)"
-      />
+      <Button label="View Menu" icon={<ArrowIcon />} />
       <Button label="Our Process" variant="ghost" />
     </div>
   );
