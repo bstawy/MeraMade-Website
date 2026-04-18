@@ -23,7 +23,7 @@
   padding: var(--space-32);
   display: flex;
   flex-direction: column;
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-page);
   border-radius: var(--radius-12);
   font-family: var(--font-display);
   position: absolute;
@@ -55,9 +55,15 @@
 }
 
 .description {
-  color: var(--color-text-muted);
+  color: var(--color-text-primary-dim);
   font-size: var(--fs-18);
   font-weight: var(--fw-light);
+}
+
+.journey {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
 }
 
 .journeyTitle {
@@ -67,17 +73,24 @@
 
 .journeyTitle::before {
   content: "";
-  /*flex: 1; */
   width: var(--space-48);
-  height: 1px; /* Thickness of the line */
-  background: var(--color-primary); /* Line color */
-  margin-right: var(--space-24); /* Gap between line and text */
+  height: 1px;
+  background: var(--color-primary);
+  margin-right: var(--space-24);
 }
 
 .journeyDescription {
-  border-left: 2px solid var(--color-bg-surface); /* Thickness, style, and color */
-  padding-left: var(--space-24);
-  color: var(--color-text-muted);
+  display: flex;
+  align-items: stretch;
+  color: var(--color-text-secondary);
+}
+
+.journeyDescription::before {
+  content: "";
+  width: 2px;
+  background: var(--color-bg-surface);
+  margin-right: var(--space-24);
+  flex-shrink: 0;
 }
 
 @media (max-width: 620px) {

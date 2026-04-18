@@ -22,9 +22,8 @@
     top: 80px;
     left: 0;
     width: 100%;
-    background: var(--color-bg);
     display: flex;
-    flex-direction: column; /* This stacks them vertically */
+    flex-direction: column;
     padding: 32px;
     transition: all var(--transition-base);
     z-index: var(--z-navbar);

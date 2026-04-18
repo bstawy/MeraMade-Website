@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import Button from "../../../components/Button/Button";
+
 import Input from "../../../components/input/Input";
+import Button from "../../../components/Button/Button";
+
 import styles from "./JoinSection.module.css";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

@@ -7,7 +7,7 @@
 }
 
 .mainText span:first-child {
-  color: var(--color-text);
+  color: var(--color-text-primary);
 }
 
 .mainText span:last-child {
@@ -17,7 +17,7 @@
 .description {
   width: 50%;
   margin-bottom: 48px;
-  color: var(--color-text-muted);
+  color: var(--color-text-primary-dim);
   font-size: var(--fs-24);
   font-weight: var(--fw-regular);
   line-height: 1.2;

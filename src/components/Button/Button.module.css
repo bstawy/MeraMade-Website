@@ -1,4 +1,9 @@
+/* ─── Base ─── */
 .btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-8);
   border: 1px solid;
   border-radius: var(--radius-6);
   transition:
@@ -9,22 +14,17 @@
     box-shadow var(--transition-base);
 }
 
-.iconButton {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.btn span {
+  display: inline-flex;
   align-items: center;
-  gap: var(--space-8);
-  transition: gap var(--transition-base);
+  flex-shrink: 0;
 }
 
-.iconButton:hover {
-  gap: var(--space-16);
-}
+/* ─── Variants ─── */
 
 .primary {
-  color: var(--color-bg-container);
-  background: var(--color-primary);
+  color: var(--color-text-on-primary);
+  background: var(--color-primary); /* was --color-accent — now theme-aware */
   border-color: var(--color-primary);
 }
 
@@ -42,13 +42,19 @@
 }
 
 .text {
-  color: var(--color-primary);
+  color: var(--color-primary); /* was --color-primary-hover */
   background: transparent;
   border-color: transparent;
 }
 
+.text:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .ghost {
-  color: var(--color-primary);
+  color: var(--color-primary); /* was --color-primary-hover */
   background: transparent;
   border-color: color-mix(in srgb, var(--color-primary), transparent 80%);
 }
@@ -56,32 +62,26 @@
 .ghost:hover {
   background: color-mix(in srgb, var(--color-primary), transparent 90%);
   border-color: color-mix(in srgb, var(--color-primary), transparent 40%);
+  box-shadow: 0 4px 14px
+    color-mix(in srgb, var(--color-primary), transparent 75%);
   transform: translateY(-2px);
 }
 
 .ghost:active {
   transform: translateY(0px);
-}
-
-.success {
-  color: var(--color-bg-surface);
-  background: var(--color-success);
-  border-color: var(--color-success);
-}
-
-.disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.disabled:hover {
-  background: transparent;
-  transform: none;
   box-shadow: none;
 }
 
+/* ─── Disabled ─── */
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none; /* replaces the broken :hover overrides below */
+}
+
+/* ─── Sizes ─── */
 .sm {
-  /*padding: 6px 14px;*/
+  padding: 6px 14px; /* was commented out — button had zero padding */
   font-size: var(--fs-14);
 }
 

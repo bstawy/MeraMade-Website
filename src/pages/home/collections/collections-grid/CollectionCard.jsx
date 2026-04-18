@@ -1,5 +1,3 @@
-import ArrowIcon from "/src/assets/arrow_v1_icon.svg?react";
-
 import Button from "../../../../components/Button/Button";
 
 import styles from "../Collections.module.css";
@@ -22,12 +20,7 @@ const CollectionCard = ({ collection }) => {
         {isMainCollection && (
           <p className={styles.cardSubtitle}>{collection.description}</p>
         )}
-        <Button
-          label="Explore Collection"
-          variant="text"
-          icon={<ArrowIcon />}
-          size="sm"
-        />
+        <Button label="Explore Collection" variant="text" size="sm" />
       </div>
     </div>
   );

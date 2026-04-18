@@ -8,16 +8,16 @@
 }
 
 .scrollIndicator__title {
-  margin-bottom: 16px;
-  color: color-mix(in srgb, var(--color-primary), transparent 60%);
+  margin-bottom: var(--space-16);
+  color: color-mix(in srgb, var(--color-text-primary), transparent 60%);
   font-size: 1rem;
   font-weight: var(--fw-regular);
 }
 
 .scrollIndicator__line {
   width: 1px;
-  height: 48px;
-  background: rgba(200, 180, 120, 0.2); /* faint track */
+  height: var(--space-48);
+  background: var(--color-bg-surface); /* faint track */
   position: relative;
   overflow: hidden;
 }

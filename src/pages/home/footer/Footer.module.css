@@ -14,7 +14,7 @@
 }
 
 .logo__description {
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   font-size: var(--fs-16);
   font-weight: var(--fw-regular);
 }
@@ -34,18 +34,18 @@
 }
 
 .guides__link {
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   font-size: var(--fs-16);
   font-weight: var(--fw-regular);
   transition: color var(--transition-fast);
 }
 
 .guides__link:hover {
-  color: var(--color-text);
+  color: var(--color-text-primary);
 }
 
 .workingHours {
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   font-size: var(--fs-16);
   font-weight: var(--fw-bold);
 }
