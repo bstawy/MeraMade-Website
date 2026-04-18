@@ -2,18 +2,163 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mera-made-website</title>
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>Mera Made — Handcrafted from Home</title>
+    <!-- ============================================================
+    DON'T FORGET TO REPLACE:
+            "https://bstawy.github.io/MeraMade-Website/"
+    WITH THE REAL DOMAIN BEFORE GOING LIVE
+    ============================================================ -->
+
+    <!-- ============================================================
+      SEO — Primary meta tags
+    ============================================================ -->
+    <meta
+      name="description"
+      content="Mera Made is a home-based artisanal sweets and baked goods brand. Every bite is handcrafted with love, using quality ingredients."
+    />
+    <meta name="author" content="Mera Made" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://bstawy.github.io/MeraMade-Website/" />
+
+    <!-- ============================================================
+      OPEN GRAPH — Facebook / LinkedIn / WhatsApp previews
+    ============================================================ -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://bstawy.github.io/MeraMade-Website/"
+    />
+    <meta property="og:title" content="Mera Made — Handcrafted from Home" />
+    <meta
+      property="og:description"
+      content="Artisanal sweets and baked goods, handcrafted from home with quality ingredients and a whole lot of love."
+    />
+    <meta
+      property="og:image"
+      content="https://bstawy.github.io/MeraMade-Website/images/og-cover.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mera Made — Handcrafted from Home" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_EG" />
+    <meta property="og:site_name" content="Mera Made" />
+
+    <!-- ============================================================
+      TWITTER CARD — Twitter / X previews
+    ============================================================ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://bstawy.github.io/MeraMade-Website/"
+    />
+    <meta name="twitter:title" content="Mera Made — Handcrafted from Home" />
+    <meta
+      name="twitter:description"
+      content="Artisanal sweets and baked goods, handcrafted from home with quality ingredients and a whole lot of love."
+    />
+    <meta
+      name="twitter:image"
+      content="https://bstawy.github.io/MeraMade-Website/images/og-cover.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Mera Made — Handcrafted from Home"
+    />
+
+    <!-- ============================================================
+      THEME COLOR
+    ============================================================ -->
+    <meta
+      name="theme-color"
+      content="#c5a059"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#e9c176"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- ============================================================
+      FAVICONS
+    ============================================================ -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicons/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/favicons/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicons/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="MeraMade" />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+
+    <!-- ============================================================
+      STRUCTURED DATA — JSON-LD
+    ============================================================ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FoodEstablishment",
+        "name": "Mera Made",
+        "url": "https://bstawy.github.io/MeraMade-Website/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://bstawy.github.io/MeraMade-Website/images/logo.png",
+          "width": 200,
+          "height": 200
+        },
+        "description": "Home-based artisanal sweets and baked goods brand. Handcrafted with quality ingredients.",
+        "servesCuisine": "Bakery, Sweets, Desserts",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "EG",
+          "addressLocality": "Cairo"
+        },
+        "sameAs": ["https://www.instagram.com/meramade"]
+      }
+    </script>
+
+    <!-- ============================================================
+      FONTS
+    ============================================================ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- ============================================================
+      SPLASH CSS — loaded here so it's ready before React boots
+    ============================================================ -->
+    <link rel="stylesheet" href="/splash.css" />
   </head>
+
   <body>
+    <div id="splash-screen">
+      <div class="loader-wrapper">
+        <img
+          class="loader-logo"
+          src="/splash_logo.png"
+          alt="Mera Made"
+          width="100"
+        />
+        <div class="loader-text">Handcrafted from Home</div>
+      </div>
+    </div>
+
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
